@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/tjwudi/jsframework-demo",
   "devDependencies": {
-    "jsdoc": "<= 3.3.0"
+    "jsdoc": "<= 3.3.0",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-mocha": "~0.4.1"
   }
 }
