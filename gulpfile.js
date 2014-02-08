@@ -7,7 +7,10 @@ var gulp = require('gulp'),
 
 
 var sourceFilesGlob = 'turing.*.js',
-    sourceFiles = ['turing.core.js', 'turing.main.js', 'turing.oo.js'],
+    sourceFiles = ['turing.core.js', 
+                  'turing.main.js', 
+                  'turing.util.js', 
+                  'turing.oo.js'],
     targetFile = 'turing.js',
     targetFilePath = 'build/turing.js',
     buildPath = 'build',
