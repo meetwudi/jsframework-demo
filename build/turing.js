@@ -1,3 +1,9 @@
+/**
+ * Core of turing.js
+ *
+ * @class  turing
+ */
+
 (function(global){
   var turing = {
     VERSION: '0.0.0'
@@ -7,9 +13,12 @@
 
   /**
    * AMD模块载入
-   * @param  {string}   moduleName 模块名称
-   * @param  {array}   dependencies 依赖模块列表
-   * @param  {Function} fn 模块主体
+   *
+   * @method  define
+   * @for turing
+   * @param  {String}   moduleName
+   * @param  {String[]}   dependencies
+   * @param  {Function} fn
    */
   turing.define = function(moduleName, dependencies, fn) {
     if (!! global.define) {

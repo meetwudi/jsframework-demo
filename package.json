@@ -22,7 +22,7 @@
     "gulp-concat": "*",
     "gulp-uglify": "*",
     "gulp-mocha": "~0.4.1",
-    "gulp-jsdoc": "0.0.1",
-    "gulp-rename": "~1.0.0"
+    "gulp-rename": "~1.0.0",
+    "gulp-yuidoc": "~0.1.0"
   }
 }
