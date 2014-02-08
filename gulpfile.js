@@ -2,9 +2,10 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     yuidoc = require('gulp-yuidoc'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    karma = require('gulp-karma');
 
-gulp.task('build', ['test'], function() {
+gulp.task('build', ['lint'], function() {
   return gulp.src(['turing.core.js'])
           .pipe(concat('turing.js'))
           .pipe(gulp.dest('build'))
@@ -17,12 +18,16 @@ gulp.task('lint', function() {
 
 });
 
-gulp.task('test', ['lint'], function() {
-
+gulp.task('test', ['build'], function() {
+  return gulp.src(['build/turing.js', 'node_modules/should/should.min.js','test/*.js'])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'run'
+    }));
 });
 
-gulp.task('doc', ['build'], function() {
-  gulp.src('build/turing.js')
+gulp.task('doc', ['test'], function() {
+  return gulp.src('build/turing.js')
     .pipe(yuidoc())
     .pipe(gulp.dest('./doc'));
 });

@@ -17,12 +17,18 @@
   },
   "homepage": "https://github.com/tjwudi/jsframework-demo",
   "devDependencies": {
-    "jsdoc": "<= 3.3.0",
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-uglify": "*",
     "gulp-mocha": "~0.4.1",
     "gulp-rename": "~1.0.0",
-    "gulp-yuidoc": "~0.1.0"
+    "gulp-yuidoc": "~0.1.0",
+    "gulp-karma": "0.0.2",
+    "should": "~3.1.2",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma": "~0.10.9",
+    "karma-opera-launcher": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1",
+    "karma-mocha": "~0.1.1"
   }
 }
