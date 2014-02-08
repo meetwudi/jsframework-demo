@@ -7,6 +7,13 @@ module.exports = function(config) {
     // base path, that will be used to resolve files and exclude
     basePath: '',
 
+    // files to load
+    files: [
+        'build/turing.js', 
+        'node_modules/should/should.min.js',
+        'test/*.js'
+    ],
+
 
     // frameworks to use
     frameworks: ['mocha'],
@@ -36,7 +43,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // Start these browsers, currently available:

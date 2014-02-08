@@ -29,6 +29,7 @@
     "karma": "~0.10.9",
     "karma-opera-launcher": "~0.1.0",
     "karma-safari-launcher": "~0.1.1",
-    "karma-mocha": "~0.1.1"
+    "karma-mocha": "~0.1.1",
+    "gulp-jshint": "~1.4.0"
   }
 }

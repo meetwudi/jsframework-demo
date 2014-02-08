@@ -29,9 +29,12 @@
       for (i = 0; i < dependencies.length; i ++) {
         injectedDependencies.push(turing._modules[dependencies[i]]);
       }
-      // 任何模块执行时的上下文应该为undefined
-      turing._modules[moduleName] = fn.apply(undefined, injectedDependencies); 
+      turing._modules[moduleName] = fn.apply(context, injectedDependencies); 
     }
+  };
+
+  if (!global.define) {
+    global.define = turing.define;
   }
 
   if (global.turing) {
