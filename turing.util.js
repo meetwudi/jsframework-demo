@@ -12,10 +12,6 @@ define('turing.util', ['turing'], function(turing) {
    * @param {Object} sourceObj 将被并入的对象（仅并入其自有属性）
    */
   turing.extend = function(targetObj, sourceObj) {
-    if (arguments.length < 3) {
-      shouldOverride = false;
-    }
-
     for (var property in sourceObj) {
       if (sourceObj.hasOwnProperty(property)) {
         if (!! targetObj.property) {
@@ -24,5 +20,5 @@ define('turing.util', ['turing'], function(turing) {
         targetObj[property] = sourceObj[property];
       }
     }
-  }
+  };
 });

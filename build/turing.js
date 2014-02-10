@@ -82,7 +82,7 @@ define('turing.util', ['turing'], function(turing) {
         targetObj[property] = sourceObj[property];
       }
     }
-  }
+  };
 });
 /**
  * 传统面向对象模拟支持
